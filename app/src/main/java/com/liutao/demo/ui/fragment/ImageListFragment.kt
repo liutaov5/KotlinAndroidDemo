@@ -1,0 +1,18 @@
+package com.liutao.demo.ui.fragment
+
+import com.liutao.demo.R
+import com.liutao.demo.base.BaseFragment
+
+/**
+ * Created by liutao on 2017/8/19.
+ */
+class ImageListFragment : BaseFragment() {
+
+
+    override fun initView() {
+
+    }
+
+    override fun getLayoutId(): Int = R.layout.fragment_image_list
+
+}
