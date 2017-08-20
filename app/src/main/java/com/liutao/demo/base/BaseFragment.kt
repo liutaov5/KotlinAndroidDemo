@@ -14,6 +14,7 @@ abstract class BaseFragment : Fragment(), IBaseView {
 
     protected lateinit var mPresenter: IBasePresenter
     protected lateinit var mContext: Context
+    protected lateinit var mRootView: View
 
     override fun onAttach(context: Context?) {
         super.onAttach(context)
@@ -21,7 +22,7 @@ abstract class BaseFragment : Fragment(), IBaseView {
     }
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        var view: View = inflater?.inflate(getLayoutId(), container, false) as View
+        mRootView = inflater?.inflate(getLayoutId(), container, false) as View
         return view
     }
 
